@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/NickHM05/Nick-s-Team-Profile-Generator#readme",
   "dependencies": {
-    "jest": "^29.3.1",
-    "inquirer":"^8.2.4"
+    "inquirer": "^8.2.4",
+    "jest": "^29.3.1"
   }
 }

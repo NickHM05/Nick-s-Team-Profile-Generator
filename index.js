@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
-const fs = require('fs');
-const { writeFile, copyFile } = require('./utils/generate-site.js');
-const pageTemplate = require("./src/page-template")
+//const fs = require('fs');
+const { writeFile } = require('./utils/generate-site.js');
+const pageTemplate = require("./Src/pageTemplate");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -24,7 +24,7 @@ const managerQnA = [
         }
     },
     {
-        type: "input",
+        type: "number",
         name: "id",
         message: "What is your Manager\'s id?",
         validate: id => {
@@ -40,8 +40,8 @@ const managerQnA = [
         type: 'input',
         name: 'email',
         message: "What is your Manager\'s email?",
-        validate: email => {
-            if (email) {
+        validate: emailInput => {
+            if (emailInput) {
                 return true;
             } else {
                 console.log("Please enter the correct email address from your Manager."); return false;
@@ -51,12 +51,12 @@ const managerQnA = [
     {
         type: 'number',
         name: 'officeNumber',
-        message: 'Enter your Manager\'s office number',
+        message: 'Enter your Manager\'s office number.',
         validate: officeInput => {
           if (officeInput) {
             return true;
           } else {
-            console.log("Please enter your Manager\'s office number!");
+            console.log("Please enter your Manager\'s office number.");
             return false;
           }
         }
@@ -84,7 +84,7 @@ const engineerQnA = [
         if (engineerNameInput) {
           return true;
         } else {
-          console.log("Please enter your engineer\'s name!");
+          console.log("Please enter your engineer\'s name");
           return false;
         }
       }
@@ -97,7 +97,7 @@ const engineerQnA = [
         if (idInput) {
           return true;
         } else {
-          console.log("Please enter this engineer\'s employee ID!");
+          console.log("Please enter this engineer\'s employee ID");
           return false;
         }
       }
@@ -110,7 +110,7 @@ const engineerQnA = [
         if (emailInput) {
           return true;
         } else {
-          console.log("Please enter your team manager\'s email address!");
+          console.log("Please enter your team manager\'s email address");
           return false;
         }
       }
@@ -123,7 +123,7 @@ const engineerQnA = [
         if (githubInput) {
           return true;
         } else {
-          console.log("Please enter this engineer\'s GitHub username!");
+          console.log("Please enter this engineer\'s GitHub username");
           return false;
         }
       }

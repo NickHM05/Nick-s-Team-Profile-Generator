@@ -1,10 +1,10 @@
-const Employee = require ("../lib/Employee");
+const Employee = require("../lib/Employee");
 
-test('can instantiate employee instance',()=>{
+test('can instantiate employee instance', () => {
     //what you expect to come out of the test
     //const e = new Employee('Sarah', 24, 'sarahkmamberger@gmail.com')
     //expect (typeof(e)).toBe('object')
-const employee = new Employee('Sarah', 24, 'sarahkmamberger@gmail.com')
+    const employee = new Employee('Sarah', 24, 'sarahkmamberger@gmail.com')
 
     expect(employee.name).toEqual(expect.any(String));
     expect(employee.id).toEqual(expect.any(Number));
