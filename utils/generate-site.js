@@ -1,10 +1,10 @@
 const fs = require('fs');
-const pageTemplate = require('../Src/pageTemplate')
+const pageTemplate = require('../src/pageTemplate')
 
 const writeFile = (data) => {
     fs.writeFile('./dist/index.html', pageTemplate(data), err => {
       // if there is an error, the promise was rejected and send the error to the Promise's '.catch' method.
-      if (err) {
+      if (err) {console.log('There is an error')
         reject(err);
         // return out of the function here to make sure the Promise doesn't accidentally execute the resolve function here too.
         return;

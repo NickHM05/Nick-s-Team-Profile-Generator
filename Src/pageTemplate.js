@@ -2,7 +2,7 @@ const Manager = require("../lib/Manager");
 const Engineer = require("../lib/Engineer");
 const Intern = require("../lib/Intern");
 
-const pageTemplate = function(employeeTeam) {
+const pageTemplate = function(employeeBucket) {
     const employeeHtmlArray = [];
     const headerHTML = `
     <!DOCTYPE html>
@@ -34,8 +34,8 @@ const pageTemplate = function(employeeTeam) {
     //   }
     // })
 
-      for (let i =0; i < employeeTeam.length; i++) {
-        employeeHtmlArray.push(employeeTeam[i],getHTML());
+      for (let i =0; i < employeeBucket.length; i++) {
+        employeeHtmlArray.push(employeeBucket[i],getHTML());
       }
        // }
       // console.log(middleBucket)

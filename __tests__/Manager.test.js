@@ -1,8 +1,7 @@
+const Manager = require("../lib/Manager");
 //extending from Employee..
 //officeNumber
 //getRole() => overridden to return 'Manager
-const Manager = require("../lib/Manager");
-
 test('can instantiate Manager object', () => {
     const manager = new Manager('Charlie', 30, 'charlie@company.com', 456)
 
