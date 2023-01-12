@@ -2,9 +2,9 @@ const Manager = require("../lib/Manager");
 const Engineer = require("../lib/Engineer");
 const Intern = require("../lib/Intern");
 
-const pageTemplate = function(employeeBucket) {
-    const employeeHtmlArray = [];
-    const headerHTML = `
+const pageTemplate = function (employeeBucket) {
+  const employeeHtmlArray = [];
+  const headerHTML = `
     <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,27 +24,28 @@ const pageTemplate = function(employeeBucket) {
 
       <div class="row g-2 justify-content-around p-3">`;
 
-      employeeHtmlArray.push(headerHTML)
-        //  let middleBucket = employeeTeam[0].getHTML()
-     
-    //  let array = employeeTeam.map((employee) => {
-    //   for (let i = 0; i < employee; i++) {
-    //       console.log(employee[i])
-    //       employeeHtmlArray.push(employee[i].getHTML())
-    //   }
-    // })
+  employeeHtmlArray.push(headerHTML)
+  //  let middleBucket = employeeTeam[0].getHTML()
 
-      for (let i =0; i < employeeBucket.length; i++) {
-        employeeHtmlArray.push(employeeBucket[i],getHTML());
-      }
-       // }
-      // console.log(middleBucket)
+  //  let array = employeeTeam.map((employee) => {
+  //   for (let i = 0; i < employee; i++) {
+  //       console.log(employee[i])
+  //       employeeHtmlArray.push(employee[i].getHTML())
+  //   }
+  // })
 
-      // employeeHtmlArray.push(middleBucket)
-      // console.log(employeeHtmlArray)
+  for (let i = 0; i < employeeBucket.length; i++) {
+    employeeHtmlArray.push(employeeBucket[i].getHTML());
+  }
+  
+  // }
+  // console.log(middleBucket)
 
-      const htmlFooter = 
-      `
+  // employeeHtmlArray.push(middleBucket)
+  // console.log(employeeHtmlArray)
+
+  const htmlFooter =
+    `
       </div>
         </div>
          <footer>
@@ -54,9 +55,9 @@ const pageTemplate = function(employeeBucket) {
     </html>
     ` ;
 
-    employeeHtmlArray.push(htmlFooter);
+  employeeHtmlArray.push(htmlFooter);
 
-    return employeeHtmlArray.join("\r\n");
+  return employeeHtmlArray.join("\r\n");
 }
 
 module.exports = pageTemplate;

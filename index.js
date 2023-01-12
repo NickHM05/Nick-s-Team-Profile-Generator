@@ -208,7 +208,7 @@ const addEmployee = async () => {
   console.log('inside add employee')
   const result = await inquirer.prompt(employeeQ)
   //.then(function (result) {
-    console.log("result.follower")
+    console.log(result.follower)
   console.log(result.addEmployee)
   switch (result.addEmployee) {
     case "Yes, please add an Engineer to my team":
