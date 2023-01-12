@@ -16,6 +16,8 @@ Needs node installed, jest, and inquirer
 
 ## Usage
 add screenshots
+- ![Screenshot of the vs code app being used](./screenshots/Screenshot%20(231).png)
+- ![Screenshot of the generated website](./screenshots/Screenshot%20(232).png)
 https://drive.google.com/file/d/1fm8bTyav3yd1SXIt6dj83F1TDrKK2Mi9/view
 image.png
 file:///C:/Users/nhmam/bootcamp/Challenges/Bootcamp-Challenge-10-From-Nicholas-Mamberger/Nick-s-Team-Profile-Generator/dist/index.html
